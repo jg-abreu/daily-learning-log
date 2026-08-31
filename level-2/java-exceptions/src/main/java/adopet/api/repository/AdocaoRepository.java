@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AdocaoRepository extends JpaRepository<Adocao,Long> {
 
-    void existsPetIdAndStatus(@NotNull Long aLong, StatusAdocao statusAdocao);
+    Integer countByTutorIdAndStatus(@NotNull Long idTutor, StatusAdocao statusAdocao);
 
-    Integer countByTutorIdAndStatus(@NotNull Long aLong, StatusAdocao statusAdocao);
+    Boolean existsByPetIdAndStatus(@NotNull Long idPet, StatusAdocao statusAdocao);
 }
