@@ -44,8 +44,10 @@ public class AdocaoService {
 
     public void aprovar(AprovarAdocaoDTO dto){
         Adocao adocao = adocaoRepository.getReferenceById(dto.idAdocao());
-        adocao.marcarComoAprovada();
-        adocao.getPet().marcarComoAdotado();
+            adocao.marcarComoAprovada();
+            adocao.getPet().marcarComoAdotado();
+            System.out.println("Adoção não encontrada");
+
     }
 
     public void reprovar(ReprovarAdocaoDTO dto){
