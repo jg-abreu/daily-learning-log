@@ -4,6 +4,7 @@ import adopet.api.dto.AdocaoDTO;
 import adopet.api.dto.AprovarAdocaoDTO;
 import adopet.api.dto.ReprovarAdocaoDTO;
 import adopet.api.dto.SolicitacaoDeAdocaoDTO;
+import adopet.api.exception.AdocaoException;
 import adopet.api.service.AdocaoService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
@@ -52,7 +53,7 @@ public class AdocaoController {
     public ResponseEntity<String> aprovar(@RequestBody @Valid AprovarAdocaoDTO dto){
         try {
             this.service.aprovar(dto);
-        }catch (EntityNotFoundException ex) {
+        }catch (AdocaoException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Adoção não encontrada");
         }
         return ResponseEntity.ok().build();
