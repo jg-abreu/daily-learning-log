@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class AbrigoService {
 
-    public static void listarAbrigos() throws IOException, InterruptedException {
+    public  void listarAbrigos() throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         String uri = "http://localhost:8080/abrigos";
 
@@ -31,7 +31,7 @@ public class AbrigoService {
         }
     }
 
-    public static void cadastrarAbrigo() throws IOException, InterruptedException {
+    public  void cadastrarAbrigo() throws IOException, InterruptedException {
         System.out.println("Digite o nome do abrigo:");
         String nome = new Scanner(System.in).nextLine();
         System.out.println("Digite o telefone do abrigo:");
@@ -58,7 +58,7 @@ public class AbrigoService {
         }
     }
 
-    private static HttpResponse<String> dispararRequisicaoGet(HttpClient client, String uri) throws IOException, InterruptedException {
+    private  HttpResponse<String> dispararRequisicaoGet(HttpClient client, String uri) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(uri))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
