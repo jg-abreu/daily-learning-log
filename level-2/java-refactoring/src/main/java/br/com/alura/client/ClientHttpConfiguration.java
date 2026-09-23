@@ -24,7 +24,7 @@ public class ClientHttpConfiguration {
                 .uri(URI.create(uri))
                 .header("Content-Type", "application/json")
                 .method("POST", HttpRequest.BodyPublishers.ofString(new Gson().toJson(object)))
-                .build();
+                .build();   
 
         return client.send(request, HttpResponse.BodyHandlers.ofString());
     }
