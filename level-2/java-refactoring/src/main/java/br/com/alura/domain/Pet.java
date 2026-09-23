@@ -38,4 +38,12 @@ public class Pet {
     public int getIdade() {
         return idade;
     }
+
+    public Float getPeso() {
+        return peso;
+    }
+
+    public String getCor() {
+        return cor;
+    }
 }
