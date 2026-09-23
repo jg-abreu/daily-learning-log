@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/level-2/java-refactoring/adopet-console.iml" filepath="$PROJECT_DIR$/level-2/java-refactoring/adopet-console.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/daily-learning-log.iml" filepath="$PROJECT_DIR$/.idea/daily-learning-log.iml" />
     </modules>
   </component>

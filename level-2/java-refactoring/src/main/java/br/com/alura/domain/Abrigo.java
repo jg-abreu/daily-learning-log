@@ -36,4 +36,7 @@ public class Abrigo {
     public String getTelefone() {
         return telefone;
     }
+
+    public void setId(long l) {
+    }
 }
