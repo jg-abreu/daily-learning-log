@@ -1,0 +1,18 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Build output
+target/
+
+# Third-party jar provided by the course (download it from the course material)
+level-2/java-refactoring/api.jar
+
+# Images uploaded while testing the java-exceptions API (the folder itself is kept)
+level-2/java-exceptions/src/main/resources/storage/*
+!level-2/java-exceptions/src/main/resources/storage/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

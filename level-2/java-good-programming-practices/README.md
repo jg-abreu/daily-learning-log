@@ -1,43 +1,40 @@
-## 💻 Sobre o projeto
+# Java Good Programming Practices — Adopet API
 
-Adopet é um site fictício de adoção de pets, com funcionalidades para cadastro de tutores, de abrigos e de pets, além de solicitação de adoções. Nesse repositório o projeto será uma API Rest em Java do Adopet.
+![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+![Spring Boot 3.1](https://img.shields.io/badge/Spring_Boot-3.1-6DB33F?logo=springboot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 
----
+The Adopet REST API (tutors, shelters, pets and adoption requests), used to study good programming practices in a Spring Boot application.
 
-## ⚙️ Funcionalidades
+Part of my [Daily Learning Log](../../README.md).
 
-- [x] Cadastro/atualização de tutores;
-- [x] Cadastro de abrigos;
-- [x] Cadastro de pets do abrigo;
-- [x] Listagem de pets disponíveis para adoção;
-- [x] Solicitação de adoção;
-- [x] Aprovação/reprovação de adoção;
+## What I practiced
 
----
+- **Separation of concerns**: moving the adoption business rules out of `AdocaoController` into `AdocaoService`, leaving the controller only with HTTP concerns
+- Extracting email sending into its own `EmailService`
+- Signaling rule violations with a validation exception instead of returning error responses from deep inside the logic
 
-## 🎨 Layout
+## Features of the API
 
-O projeto desse repositório é apenas a API Backend, mas existe um figma com o layout que está disponível neste link: <a href="https://www.figma.com/file/TlfkDoIu8uyjZNla1T8TpH?embed_host=notion&kind=&node-id=518%3A11&t=esSUkfGQEWUeUASj-1&type=design&viewer=1">Layout no Figma</a>
+- Register and update tutors
+- Register shelters and their pets
+- List pets available for adoption
+- Request an adoption, then approve or reject it
 
----
+## Tech stack
 
-## 🛠 Tecnologias
+Java 17 · Spring Boot 3.1 (Web, Data JPA, Validation, Mail) · MySQL · Flyway migrations
 
-As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
+## Running
 
-- **[Java 17](https://www.oracle.com/java)**
-- **[Spring Boot 3](https://spring.io/projects/spring-boot)**
-- **[Maven](https://maven.apache.org)**
-- **[MySQL](https://www.mysql.com)**
-- **[Hibernate](https://hibernate.org)**
-- **[Flyway](https://flywaydb.org)**
+Requirements: Java 17 and a local MySQL server. The database `adopet` is created automatically with user `root` and password `root` (see [`application.properties`](src/main/resources/application.properties)); the mail settings are placeholders.
 
----
+```bash
+./mvnw spring-boot:run       # http://localhost:8080
+```
 
-## 📝 Licença
+The UI layout for Adopet is available in [Figma](https://www.figma.com/file/TlfkDoIu8uyjZNla1T8TpH); this module is the back end only.
 
-O projeto desse repositório foi desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de boas práticas de programação com Java.
+## Credits
 
-Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira)
-
----
+Project and course by [Alura](https://www.alura.com.br) — instructor [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira). The commits in this folder are my work while following the lessons.

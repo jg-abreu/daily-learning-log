@@ -1,61 +1,71 @@
-# 📚 Daily Learning Log
+# Daily Learning Log
 
-Repositório onde registro meus estudos: anotações, exercícios e pequenos projetos feitos ao longo dos cursos que faço.
+![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3-6DB33F?logo=springboot&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?logo=apachemaven&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 
-Não atualizo esse README a cada estudo — quem mostra a constância aqui é o **histórico de commits**, não uma tabela manual. O README só documenta a estrutura de pastas, pra eu (e quem mais olhar) saber se localizar rapidamente.
+My study log: the code I write while working through back-end courses, organized by level and topic, with one commit per lesson so the history shows the progress step by step.
 
-## 🗂️ Estrutura de pastas
+## Contents
 
-Apenas **nível** e **assunto** viram pasta:
+- [What's inside](#whats-inside)
+- [Repository structure](#repository-structure)
+- [How I organize the commits](#how-i-organize-the-commits)
+- [Running a module](#running-a-module)
+- [Credits](#credits)
 
-```
-nível → assunto → src
-```
+## What's inside
 
-- **Nível**: a camada mais alta, agrupa vários assuntos.
-- **Assunto**: dentro de cada nível, cada assunto (equivalente a um módulo do curso) é uma pasta com o projeto completo daquele assunto.
+| Module | Topic | What I practiced | Stack |
+|---|---|---|---|
+| [`level-2/java-exceptions`](level-2/java-exceptions) | Exception handling | `try/catch`, checked vs. unchecked exceptions, custom exceptions, a global exception handler returning structured errors | Spring Boot 3.1, MySQL, Flyway |
+| [`level-2/java-refactoring`](level-2/java-refactoring) | Refactoring | Extracting methods and services, removing duplication, an HTTP client layer, domain classes, Jackson, a first unit test and the Command pattern | Java 17, Jackson, JUnit |
+| [`level-2/java-good-programming-practices`](level-2/java-good-programming-practices) | Good practices | Separation of concerns: moving business rules out of the controller into services | Spring Boot 3.1, MySQL, Flyway |
 
-**Conjunto** e **aula** não viram pasta — são a granularidade dos **commits** dentro do projeto do assunto. Cada assunto tem 4 conjuntos, e cada conjunto tem 4 aulas; cada aula estudada vira um commit no projeto daquele assunto.
+All three modules are built around **Adopet**, a fictional pet adoption platform used throughout the courses. Each module folder has its own README with details.
 
-### Exemplo de pastas
+## Repository structure
 
 ```
 daily-learning-log/
-├── README.md
-├── nivel-01/
-│   ├── heranca/
-│   │   ├── src/
-│   │   └── ...
-│   ├── spring-data-jpa/
-│   │   ├── src/
-│   │   └── ...
-│   └── polimorfismo/
-│       ├── src/
-│       └── ...
-├── nivel-02/
-│   ├── testes-automatizados/
-│   │   ├── src/
-│   │   └── ...
-│   └── api-rest/
-│       ├── src/
-│       └── ...
-└── nivel-03/
+└── level-2/                               ← course level
+    ├── java-exceptions/                   ← one complete project per topic
+    ├── java-refactoring/
+    └── java-good-programming-practices/
 ```
 
-### Exemplo de commits dentro de um assunto
+Only the **level** and the **topic** become folders. Each topic is a self-contained Maven project that can be opened and run on its own.
 
-Cada commit descreve o que foi feito naquela aula
+## How I organize the commits
+
+Inside each topic, every lesson I study becomes a commit describing what was done, for example:
 
 ```
-cria classe Pessoa com atributos e construtor
-implementa herança entre Pessoa e Funcionario
-adiciona sobrescrita de métodos com @Override
-implementa polimorfismo na classe Funcionario
-...
+creating our exception
+throwing our exception
+capturing other exceptions
 ```
 
-Assim, o histórico de commits de cada assunto já mostra o progresso aula a aula — sem precisar duplicar isso em pastas ou em documentação manual.
+The commit history of a folder is the record of how that project evolved lesson by lesson, so I don't keep a separate progress table — `git log -- level-2/java-exceptions` tells the story.
 
----
+## Running a module
 
-> Repositório vivo — a estrutura de pastas acima é fixa, o conteúdo cresce conforme os estudos avançam.
+Each module is a standard Maven project with its own wrapper:
+
+```bash
+cd level-2/<module>
+./mvnw spring-boot:run      # Spring Boot modules
+```
+
+Some modules need a local MySQL database or a companion API; the module README lists what it needs.
+
+## Credits
+
+The Adopet projects and their starting code come from [Alura](https://www.alura.com.br) courses on Java and back-end development. The changes in each module are my own work while following the lessons.
+
+## Author
+
+**João Abreu** — back-end developer and Computer Science student in Rio de Janeiro, Brazil.
+
+[GitHub](https://github.com/jg-abreu) · [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-abreuuu) · jgabreudev@gmail.com
