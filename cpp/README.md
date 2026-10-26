@@ -7,6 +7,6 @@ Each chapter of the tutorial is a folder with my notes (`notes.md`) and the code
 ## Compiling
 
 ```bash
-g++ -std=c++17 -Wall -Wextra main.cpp -o main
+g++ -std=c++20 -ggdb -pedantic-errors -Wall -Wextra -Wconversion -Wsign-conversion main.cpp -o main
 ./main
 ```

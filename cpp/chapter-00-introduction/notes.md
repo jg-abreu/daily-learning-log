@@ -8,7 +8,7 @@ Source: [learncpp.com — Chapter 0](https://www.learncpp.com/#Chapter0)
 
 - **C++ compiles straight to machine code.** There is no JVM: the compiler (`g++`) turns `.cpp` source files into a native executable for one platform. An `.exe` built on Windows doesn't run on Linux.
 - **"Trust the programmer."** C++ lets you write code that makes no sense without stopping you (out-of-bounds array access, uninitialized variables). Knowing what *not* to do matters almost as much as knowing what to do, so compiler warnings should always be on.
-- **The language version matters.** C++11 is the start of "modern C++"; I use **C++17** (`-std=c++17`) so the examples from the tutorial compile.
+- **The language version matters.** C++11 is the start of "modern C++"; I use **C++20** (`-std=c++20`), the newest standard my compiler supports well.
 
 ### Other notes
 
