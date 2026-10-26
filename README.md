@@ -22,8 +22,9 @@ My study log: the code I write while working through back-end courses, organized
 | [`level-2/java-exceptions`](level-2/java-exceptions) | Exception handling | `try/catch`, checked vs. unchecked exceptions, custom exceptions, a global exception handler returning structured errors | Spring Boot 3.1, MySQL, Flyway |
 | [`level-2/java-refactoring`](level-2/java-refactoring) | Refactoring | Extracting methods and services, removing duplication, an HTTP client layer, domain classes, Jackson, a first unit test and the Command pattern | Java 17, Jackson, JUnit |
 | [`level-2/java-good-programming-practices`](level-2/java-good-programming-practices) | Good practices | Separation of concerns: moving business rules out of the controller into services | Spring Boot 3.1, MySQL, Flyway |
+| [`level-3/java-spring-security`](level-3/java-spring-security) | Best practices and security | Applying good practices to a REST API and securing it with Spring Security (in progress) | Spring Boot 3, Spring Security |
 
-All three modules are built around **Adopet**, a fictional pet adoption platform used throughout the courses. Each module folder has its own README with details.
+The level-2 modules are built around **Adopet**, a fictional pet adoption platform used throughout the courses. Each module folder has its own README with details.
 
 ## Repository structure
 
@@ -33,6 +34,8 @@ daily-learning-log/
     ├── java-exceptions/                   ← one complete project per topic
     ├── java-refactoring/
     └── java-good-programming-practices/
+└── level-3/
+    └── java-spring-security/
 ```
 
 Only the **level** and the **topic** become folders. Each topic is a self-contained Maven project that can be opened and run on its own.
