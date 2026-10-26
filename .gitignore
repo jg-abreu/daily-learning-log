@@ -6,6 +6,11 @@
 # Build output
 target/
 
+# C++ build output
+*.exe
+*.o
+*.out
+
 # Third-party jar provided by the course (download it from the course material)
 level-2/java-refactoring/api.jar
 
