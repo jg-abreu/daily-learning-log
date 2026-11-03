@@ -11,12 +11,21 @@ target/
 *.o
 *.out
 
+# CodeLite (workspace and .project files are kept)
+.codelite/
+build-*/
+Debug/
+Release/
+*.mk
+cpp/**/Makefile
+compile_commands.json
+
 # Third-party jar provided by the course (download it from the course material)
-level-2/java-refactoring/api.jar
+java/level-2/java-refactoring/api.jar
 
 # Images uploaded while testing the java-exceptions API (the folder itself is kept)
-level-2/java-exceptions/src/main/resources/storage/*
-!level-2/java-exceptions/src/main/resources/storage/.gitkeep
+java/level-2/java-exceptions/src/main/resources/storage/*
+!java/level-2/java-exceptions/src/main/resources/storage/.gitkeep
 
 # OS
 .DS_Store

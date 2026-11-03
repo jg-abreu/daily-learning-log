@@ -9,14 +9,20 @@ C++ I'm studying for the Bases de Programação subject at Universidade Veiga de
 
 ```
 cpp/
-├── section-04-structure-of-a-cpp-program/   ← one folder per course section
-│   ├── notes.md                             ← short notes from the lessons
-│   └── *.cpp                                ← lesson examples and the section exercise
+├── beginning-cpp/                             ← the Udemy course
+│   ├── beginning-cpp.workspace                ← CodeLite workspace
+│   └── section-04-structure-of-a-cpp-program/ ← one folder per course section
+│       ├── notes.md                           ← short notes from the lessons
+│       └── <lesson-or-exercise>/              ← one CodeLite project per lesson with code
 └── beecrowd/
-    └── 1000-hello-world.cpp                 ← one file per problem: <id>-<short-name>.cpp
+    └── 1000-hello-world.cpp                   ← one file per problem: <id>-<short-name>.cpp
 ```
 
+Each section is a branch, each lesson with code is a commit, the section exercise has its own commit, and each section ends in a pull request. Theory-only lessons go into the section `notes.md`.
+
 ## Compiling
+
+The course projects are built with CodeLite (MinGW g++). Any single file can also be compiled by hand:
 
 ```bash
 g++ -std=c++20 -Wall -Wextra -pedantic-errors main.cpp -o main

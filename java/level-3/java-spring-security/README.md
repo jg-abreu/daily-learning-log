@@ -20,7 +20,7 @@ Java 17 · Spring Boot 3 · Spring Security · Maven
 ## Running
 
 ```bash
-cd level-3/java-spring-security
+cd java/level-3/java-spring-security
 ./mvnw spring-boot:run
 ```
 
