@@ -23,6 +23,7 @@ My study log: the code I write while working through courses, organized by langu
 | [`java/level-2/java-refactoring`](java/level-2/java-refactoring) | Refactoring | Extracting methods and services, removing duplication, an HTTP client layer, domain classes, Jackson, a first unit test and the Command pattern | Java 17, Jackson, JUnit |
 | [`java/level-2/java-good-programming-practices`](java/level-2/java-good-programming-practices) | Good practices | Separation of concerns: moving business rules out of the controller into services | Spring Boot 3.1, MySQL, Flyway |
 | [`java/level-3/java-spring-security`](java/level-3/java-spring-security) | Best practices and security | Applying good practices to a REST API and securing it with Spring Security (in progress) | Spring Boot 3, Spring Security |
+| [`cpp`](cpp) | C++ fundamentals | Udemy C++ course sections and Beecrowd problems for my C++ subject at UVA (in progress) | C++20, g++ |
 
 The level-2 modules are built around **Adopet**, a fictional pet adoption platform used throughout the courses. Each module folder has its own README with details.
 
@@ -40,11 +41,11 @@ daily-learning-log/
 │   └── level-3/
 │       └── java-spring-security/
 └── cpp/                                   ← C++ studies
-    ├── beginning-cpp/                     ← one folder per course
-    └── learncpp/
+    ├── beginning-cpp/                     ← Udemy course, one folder per section
+    └── beecrowd/                          ← practice problems
 ```
 
-In `java/`, only the **level** and the **topic** become folders, and each topic is a self-contained Maven project that can be opened and run on its own. In `cpp/`, each course is a folder split by section; see [`cpp/README.md`](cpp/README.md).
+In `java/`, only the **level** and the **topic** become folders, and each topic is a self-contained Maven project that can be opened and run on its own. In `cpp/`, the course is split by section and Beecrowd problems have their own folder; see [`cpp/README.md`](cpp/README.md).
 
 ## How I organize the commits
 
