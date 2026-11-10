@@ -1,29 +1,50 @@
-# Spring Boot 3 — Best Practices and API Security
+## 💻 Sobre o projeto
 
-![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
-![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3-6DB33F?logo=springboot&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?logo=springsecurity&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-C71A36?logo=apachemaven&logoColor=white)
+Voll.med é uma clínica médica fictícia que precisa de um aplicativo para gestão de consultas. O aplicativo deve possuir funcionalidades que permitam o cadastro de médicos e de pacientes, e também o agendamento e cancelamento de consultas.
 
-Applying good practices to a Spring Boot REST API and securing it with Spring Security.
+Enquanto um time de desenvolvimento será responsável pelo aplicativo mobile, o nosso será responsável pelo desenvolvimento da API Rest desse projeto.
 
-Part of my [Daily Learning Log](../../README.md).
+---
 
-## What I practiced
+## ⚙️ Funcionalidades
 
-- _In progress — filled in as the lessons happen._
+- [x] CRUD de médicos;
+- [x] CRUD de pacientes;
+- [ ] Agendamento de consultas(em breve);
+- [ ] Cancelamento de consultas(em breve);
 
-## Tech stack
+---
 
-Java 17 · Spring Boot 3 · Spring Security · Maven
+## 🎨 Layout
 
-## Running
+O layout da aplicação mobile está disponível neste link: <a href="https://www.figma.com/file/N4CgpJqsg7gjbKuDmra3EV/Voll.med">Figma</a>
 
-```bash
-cd java/level-3/java-spring-security
-./mvnw spring-boot:run
-```
+---
 
-## Credits
+## 📄 Documentação
 
-Starting code and course by [Alura](https://www.alura.com.br). The commits in this folder are my work lesson by lesson.
+A documentação das funcionalidades da aplicação pode ser acessada neste link: <a href="https://trello.com/b/O0lGCsKb/api-voll-med">Trello</a>
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
+
+- **[Java 17](https://www.oracle.com/java)**
+- **[Spring Boot 3](https://spring.io/projects/spring-boot)**
+- **[Maven](https://maven.apache.org)**
+- **[MySQL](https://www.mysql.com)**
+- **[Hibernate](https://hibernate.org)**
+- **[Flyway](https://flywaydb.org)**
+- **[Lombok](https://projectlombok.org)**
+
+---
+
+## 📝 Licença
+
+Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
+
+Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira) 
+
+---
